@@ -3,19 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/events.css" />
-    <title>Events</title>
+    <title>Event List</title>
+    <link rel="stylesheet" href="../css/events.css" />
   </head>
   <body>
-    <div class="hero">
+    <div class="image-section">
       <img
-        class="background"
-        src="../assets/Background-image.jpg"
-        alt="background-image"
+        class="image"
+        src="../assets/heroBackgroundImage.jpg"
+        alt="Hero Background Image"
       />
-      <div class="flex-container">
-        <h1>Event List</h1>
-        <p>Home / Event List</p>
+      <div class="text-overlay">
+        <h1 class="text--one">Event List</h1>
+        <p class="text--two">Home / Event List</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="filters">
+        <div class="filter">
+          <div class="filter-item-all">
+            <div class="filter-item">All event</div>
+          </div>
+          <div class="filter-item-specifc">
+            <div class="filter-item">Conference Event</div>
+            <div class="filter-item">Play Ground Event</div>
+            <div class="filter-item">Musical Event</div>
+          </div>
+          <div class="filter-item-date">
+            <input type="date" name="" id="" />
+          </div>
+        </div>
+      </div>
+      <div class="Event-item--primary">
+        <img src="background-item" alt="" />
+        <div class="item-content">
+          <div class="item-text">
+            <h1>Hosted Dinner With Chef Monica Geller Festival</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+              iure?
+            </p>
+          </div>
+        </div>
+        <div class="details-btn">
+          <img src="icon.svg" alt="" />
+          <p>Details</p>
+        </div>
       </div>
     </div>
   </body>
