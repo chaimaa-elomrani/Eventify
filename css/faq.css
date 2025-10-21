@@ -1,0 +1,17 @@
+body{
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    font-family: "Inter", sans-serif;
+}
+
+h3{
+    letter-spacing: -0.6px;
+}
+#message{
+    resize: none;
+}
+body{
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
