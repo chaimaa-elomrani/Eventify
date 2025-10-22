@@ -580,6 +580,9 @@ h1 span {
 .newsletter-section {
   background-color: #2a2a2a;
   padding: 3rem 3rem 2rem;
+    /* background-color: #1a1a1a; */
+  padding: 2.5rem 3rem;
+  border-top: 4px solid #605f5f;
 }
 
 .newsletter-container {
