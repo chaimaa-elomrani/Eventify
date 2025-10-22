@@ -105,15 +105,19 @@ let count_down = setInterval(()=>{
 
 
 
-// event image
-
-
-// let image_event = document.querySelector(".image_event");
 
 
 
-// image_event.addEventListener("click", ()=>{
-//     let overlay = document.createElement("div");
-//     overlay.id = "overlay_jazz_gallery";
-//     document.body.append(overlay);
-// })
+let image_event = document.querySelector(".image_event");
+let overlay = document.getElementById("overlay_jazz_gallery");
+let close_btn = document.querySelector(".close");
+
+
+image_event.addEventListener("click", ()=>{
+   overlay.classList.add("show");
+})
+
+
+close_btn.addEventListener("click" , ()=>{
+    overlay.classList.remove("show");
+})

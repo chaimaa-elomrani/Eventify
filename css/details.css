@@ -62,6 +62,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--dark_color);
+  /* overflow: hidden; */
 }
 
 header {
@@ -285,11 +286,22 @@ main {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(22, 2, 2, 0.858);
+    height:230vh;
+    background-color: #fff;
+    display: none;
+    transition: left .5s linear;
+  
+   
 }
 
 
+
+
+
+#overlay_jazz_gallery.show{
+    display: block;
+     
+}
 
 .close{
     position: absolute;
@@ -302,6 +314,7 @@ main {
     text-align: center;
     line-height: 30px;
     font-size: 20px;
+    cursor: pointer;
 
 
 
@@ -390,18 +403,10 @@ main {
     transform: translateX(-200px);
 }
 
-.gallery{
-    background-color: var(--white_color);
-    height: 300vh;
-    /* background-color: red; */
-   
-
-}
 
 
 .title_gallery{
-    /* background-color: red; */
-    padding: 0px 40px;
+    padding:0 40px;
     text-decoration: underline;
 
 }
@@ -409,30 +414,46 @@ main {
 
 .card_gallery{
 display: grid;
-grid-template-columns: repeat(auto-fill , minmax(200px , 400px));
-/* grid-template-rows: repeat(auto-fill , minmax(300px , 400px)); */
+grid-template-columns: repeat(auto-fill , minmax(400px , 400px));
 justify-content: center;
 align-items: center;
-padding: 10px;
-gap: 30px;
+padding: 0 10px;
+gap: 20px;
+/* background-color: #fff; */
+width: 100%;
+height: 180vh;
 }
 
 
 .card{
     padding: 10px;
-    box-shadow: 1px 3px 3px #c5c3c3;
-
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    box-shadow: 2px 5px 2px #c5c3c350;
+    gap: 10px;
 
     & span{
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 
 .card img{
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height:200px;
+    object-fit: contain;
     object-position: center;
 }
 
+.footer_gallery{
+    /* background-color: rgba(219, 210, 210, 0.442); */
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+   gap: 20px;
+
+   transform: translateY(30PX);
+}
