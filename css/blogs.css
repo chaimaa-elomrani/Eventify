@@ -1,14 +1,602 @@
-@media(min-width:670px){
+
+*{
+    margin:0;
+    
+}
+@media(max-width:769px){
+body{
+    background-color: #262222;
+}
+#content{
+    height:4900px;
+    width:100%;
+    background-color: #181616;
+}
+
 #header{
+    background-image: url(/assets/black-color.png),url(/assets/hereBackgroundImage.jpg);
+    background-size:cover;
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr;
+    grid-template-rows:90px 90px;
     height:365px;
-    width:90%;
-    background-color: aqua;
+    width:100%;
+    
 
 }
+.logo img{
+    width:107px;
+    height:34px;
+}
+
 #nav{
+    padding: 12px;
     display: flex;
     justify-content: space-between;
+    align-items:start;
 }
+.fa-bars{
+    color:white;
+}
+.title_mobile{
+    
+    
+    display: flex;
+    flex-direction:column;
+    gap:8px;
+    justify-content: end;
+    align-items: center;
+    
+
+}
+.title_mobile h3{
+    color: white;
+    font-family: "Metal Mania", cursive;
+    font-size: 40px;
+}
+.title_mobile p{
+    color: white;
+
+}
+.title_mobile span{ color:yellow;
+}
+.burger img{
+    width: 20px;
+    height:40px;
+    align-items: start;
+}
+
+.boxes{
+     padding-top: 40px;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(6,280px);
+    margin-bottom: 100px;
+}
+.boxes p{
+    font-size:larger;
+
+}
+.first_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+}
+.first_box img{
+    
+    width:225px;
+    height: 141px;
+}
+.first_box p{
+    width: 220px;
+    font-size: medium;
+    text-align: center;
+    color:white;
+}
+
+.second_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+}
+.second_box img{
+    
+    width:225px;
+    height: 141px;
+}
+.second_box p{
+    width: 220px;
+    font-size: medium;
+    text-align: center;
+    color:white;
+}
+
+.third_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+}
+.third_box img{
+    
+    width:225px;
+    height: 141px;
+}
+.third_box p{
+    width: 220px;
+    font-size: medium;
+    text-align: center;
+    color:white;
+}
+
+
+.fourth_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+}
+.fourth_box img{
+    
+    width:225px;
+    height: 141px;
+}
+.fourth_box p{
+    width: 220px;
+    font-size: medium;
+    text-align: center;
+    color:white;
+}
+
+
+.five_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+}
+.five_box img{
+    
+    width:225px;
+    height: 141px;
+}
+.five_box p{
+    width: 220px;
+    font-size: medium;
+    text-align: center;
+    color:white;
+}
+
+
+
+.six_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:15px;
+}
+.six_box img{
+    
+    width:225px;
+    height: 141px;
+}
+.six_box p{
+    width: 220px;
+    font-size: medium;
+    text-align: center;
+    color:white;
+}
+.content_socialmedia{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 100px;
+}
+.title{
+    grid-column:1/3;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    align-self: center;
+}
+.title h3{
+    font-size: 40px;
+    font-family: "Metal Mania", cursive;
+    color:yellow;
+    height: 76px;
+    width: 200px;
+    
+}
+
+.spotify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.spotify img{
+    width:100px;    
+}
+.google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.google img{
+    width:100px;    
+}
+
+.stripe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.stripe img{
+    width:100px;
+}
+.youtube{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.youtube img{
+    width:100px;    
+}
+.microsoft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.microsoft img{
+    width:100px;    
+}
+.zoom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.zoom img{
+    width:100px;    
+}
+.medium{
+    grid-column:1/3;
+    display: flex;
+    justify-content: center;
+
+}
+.medium img{
+    width:200px;    
+}
+#location_part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+.under_title{
+    gap:17px;
+    align-self:center;
+}
+.under_title h4{
+    color: #FFFFFF;
+    font-size: 40px;
+}
+.content_location{
+    display: flex;
+    flex-direction: column;
+    gap:3em;
+    align-items: start;
+
+}
+.content_location p{
+    font-size: 29px;
+    color: #AEA6A6;
+
+}
+
+.content_location i{
+    
+    font-size: 18px;
+    color: #AEA6A6;
+}
+.content_location iframe{
+    align-self: center;
+}
+
+
+
+}
+
+@media(min-width:769px) and (max-width:1023px){
+    #header{
+    background-image: url(/assets/black-color.png),url(/assets/hereBackgroundImage.jpg);
+    background-size:cover;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:90px 90px;
+    height:365px;
+    width:100%;
+    background-color: red ;
+
+}
+.logo img{
+    width:107px;
+    height:34px;
+}
+
+#nav{
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+}
+.fa-bars{
+    color:white;
+}
+.title_mobile{
+    
+    
+    display: flex;
+    flex-direction:column;
+    gap:8px;
+    justify-content: end;
+    align-items: center;
+    
+
+}
+.title_mobile h3{
+    color: white;
+    font-family: "Metal Mania", cursive;
+    font-size: 40px;
+}
+.title_mobile p{
+    color: white;
+
+}
+.title_mobile span{ color:yellow;
+}
+.burger img{
+    width: 20px;
+    height:40px;
+    align-items: start;
+}
+body{
+    background-color: #262222;
+}
+.boxes{
+     padding: 40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:repeat(3,400px);
+    margin-bottom: 100px;
+    gap:9em;
+}
+.boxes p{
+    font-size:larger;
+
+}
+.first_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.first_box img{
+    width: clamp(100px, 50vh, 400px);
+    height:clamp(200px, 323px,400px );
+    
+    height: 323px;
+}
+.first_box p{
+    text-align: center;
+    color:white;
+}
+
+.second_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.second_box img{
+    
+    width:367px;
+    height: 323px;
+}
+.second_box p{
+    text-align: center;
+    color:white;
+}
+
+.third_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.third_box img{
+    
+    width:367px;
+    height: 323px;
+}
+.third_box p{
+    text-align: center;
+    color:white;
+}
+
+
+.fourth_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.fourth_box img{
+    
+    width:367px;
+    height: 323px;
+}
+.fourth_box p{
+    text-align: center;
+    color:white;
+}
+
+
+.five_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.five_box img{
+    
+    width:367px;
+    height: 323px;
+}
+.five_box p{
+    text-align: center;
+    color:white;
+}
+
+
+
+.six_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.six_box img{
+    
+    width:367px;
+    height: 323px;
+}
+.six_box p{
+    text-align: center;
+    color:white;
+}
+.content_socialmedia{
+    display:grid;
+    grid-template-columns:repeat(4 , 1fr);
+    grid-template-rows:1fr 1fr ;
+    margin-bottom: 100px;
+}
+.title{
+    grid-column:1/5;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    align-self: center;
+}
+.title h3{
+    font-size: 64px;
+    font-family: "Metal Mania", cursive;
+    color:yellow;
+    height: 76px;
+    width:323px;
+}
+
+.spotify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.stripe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.stripe img{
+    width:153px;
+}
+.youtube{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.microsoft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.zoom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.medium{
+
+    display: flex;
+    justify-content: center;
+
+}
+#location_part{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:300px 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+.under_title{
+    gap:17px;
+    align-self:center;
+}
+.under_title h4{
+    color: #FFFFFF;
+    font-size: 60px;
+}
+.content_location{
+    display: flex;
+    flex-direction: column;
+    gap:3em;
+    
+    align-items: start;
+
+}
+.content_location p{
+    font-size: 40px;
+    color: #AEA6A6;
+
+}
+
+.content_location i{
+    
+    font-size: 32px;
+    color: #AEA6A6;
+}
+.content_location iframe{
+    align-self: center;
+}
+
+
 }
