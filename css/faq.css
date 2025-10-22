@@ -1,17 +1,132 @@
-body{
-    display: grid;
-    grid-template-columns: 50px 1fr 1fr 50px;
-    font-family: "Inter", sans-serif;
+.main{
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  font-family: "Inter", sans-serif;
+  background-color: #262222;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  color: white;
 }
 
-h3{
-    letter-spacing: -0.6px;
+h3 {
+  letter-spacing: -0.6px;
 }
-#message{
-    resize: none;
+#message {
+  resize: none;
+  width: auto;
+  height: 150px;
+  background-color: #262222;
+  border-radius: 20px;
 }
-body{
-    display: grid;
-    grid-template-columns: 50px 1fr 1fr 50px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+.submit {
+  background-color: #c3650c;
+  justify-content: center;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+}
+.contact {
+  grid-area: 1 / 2 / 2 / 4;
+}
+.map {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.input_email {
+  background-color: #262222;
+  border-radius: 20px;
+}
+.form {
+  grid-area: 2 / 3 / 3 / 4;
+  background-color: #4c4646;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+}
+.cube {
+  align-self: center;
+  justify-content: center;
+}
+.info {
+  grid-area: 4 / 2 / 5 / 4;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #303030, #bdc317);
+  height: 50%;
+}
+.info > p {
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}
+/* footer */
+.footer {
+  background-color: #1a1a1a;
+  padding: 2rem 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-logo {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.footer-logo span {
+  color: #f4df22;
+}
+
+.footer-copyright {
+  color: #888;
+  font-size: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f4df22;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  color: white;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
 }

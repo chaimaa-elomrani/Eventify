@@ -1,0 +1,734 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2a2a2a;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 70%;
+  position: fixed;
+}
+
+.logo h2 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 0;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f4df22;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+  padding: 1.5rem 0;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: #f4df22;
+}
+
+/* Hero Section */
+.card {
+  position: relative;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 70vh;
+  background: url("/assets/backgroundHome.png") center / cover no-repeat;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  color: white;
+  padding: 0 2rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-family: "Metal Mania", cursive;
+  font-size: 60px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+h1 span {
+  color: #f4df22;
+}
+
+/* Artist Cards */
+.hero2 {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.imgCard {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+}
+
+.imgCard:hover {
+  flex: 1.5;
+}
+
+.imgCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imgCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.artist-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+}
+
+.artist-info h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.artist-info p {
+  font-size: 12px;
+  color: #f4df22;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Metal Mania", cursive;
+}
+
+/* About Section */
+.about-section {
+  padding: 6rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-left {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-label {
+  color: #f4df22;
+  font-size: 40px;
+  font-family: "Metal Mania", cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-left h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.about-description {
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-description p {
+  margin-bottom: 1rem;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature-content h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.feature-content p {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Albums Section */
+.albums-section {
+  position: relative;
+  background-color: #1a1a1a;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.album-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 223, 34, 0.25) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(244, 223, 34, 0.15) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: "Metal Mania", cursive;
+  color: #f4df22;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.album-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  aspect-ratio: 1;
+}
+
+.album-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.4) contrast(1.1);
+}
+
+.albums-description {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Events Section */
+.events-section {
+  background-color: #1a1a1a;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.event-card {
+  background-color: #0a0a0a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  border-color: #f4df22;
+}
+
+.event-image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-header {
+  border-bottom: 2px solid #f4df22;
+  padding-bottom: 1rem;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.event-meta {
+  display: flex;
+  gap: 2rem;
+  font-size: 13px;
+}
+
+.event-meta span {
+  color: #f4df22;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-description {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.event-location {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.event-btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.event-btn:hover {
+  background-color: #ff8c00;
+}
+
+.categories-bar {
+  background-color: white;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  border-top: 4px solid #ff6b00;
+}
+
+.category-item {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-item span {
+  color: #ff6b00;
+}
+
+/* Team Section */
+.team-section {
+  background-color: #2a2a2a;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.section-title {
+  font-family: "Metal Mania", cursive;
+  color: #f4df22;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.member-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 3px solid #f4df22; */
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-name {
+  font-family: "Metal Mania", cursive;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+}
+
+.member-description {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* News Section */
+.news-section {
+  background-color: #2a2a2a;
+  padding: 0 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.news-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-title {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.newsletter-section {
+  background-color: #2a2a2a;
+  padding: 3rem 3rem 2rem;
+  border-top: 1px solid #444;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.newsletter-content h2 {
+  color: #ff6b00;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-content p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newsletter-input {
+  background-color: transparent;
+  border: 2px solid #666;
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-size: 14px;
+  width: 300px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+  color: #888;
+}
+
+.newsletter-input:focus {
+  border-color: #ff6b00;
+}
+
+.newsletter-btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.newsletter-btn:hover {
+  background-color: #ff8c00;
+}
+
+/* Image Strip */
+.image-strip {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.image-strip img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  padding: 2rem 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-logo span {
+  color: #f4df22;
+}
+
+.footer-copyright {
+  color: #888;
+  font-size: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f4df22;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  color: white;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+
