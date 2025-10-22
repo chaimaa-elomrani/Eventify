@@ -11,18 +11,23 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <div class="logo">
           <h2>Event<span>ify</span></h2>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="burger" id="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </header>
 
@@ -362,7 +367,7 @@
         <div class="newsletter-container">
           <div class="newsletter-content">
             <h2>Let's connect</h2>
-            <p>Sign up for new releases to your inbox<br />every month</p>
+            <p>Sign up for new releases to your inbox every month</p>
           </div>
           <div class="newsletter-form">
             <input
@@ -374,13 +379,22 @@
           </div>
         </div>
       </section>
+
+      <!-- Image Strip -->
+      <div class="image-strip">
+        <img src="./assets/image 27.png" alt="Event 1" />
+        <img src="./assets/image 28.png" alt="Event 2" />
+        <img src="./assets/image 29.png" alt="Event 3" />
+        <img src="./assets/image 30.png" alt="Event 4" />
+        <img src="./assets/image 31.png" alt="Event 5" />
+      </div>
     </main>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
           <h2 class="footer-logo">Event<span>ify</span></h2>
-          <p class="footer-copyright">Created Eventify Team @ 2025</p>
+          <p class="footer-copyright">Created Eventify Team © 2025</p>
         </div>
 
         <ul class="footer-nav">
@@ -392,12 +406,38 @@
         </ul>
 
         <div class="footer-social">
-          <div class="social-icon spotify"><img src="assets/youtube.png" alt=""></div>
-          <div class="social-icon instagram"><img src="assets/facebook.png" alt=""></div>
-          <div class="social-icon facebook"><img src="assets/instagram.png" alt=""></div>
-          <div class="social-icon tiktok"><img src="assets/spotify.png" alt=""></div>
+          <a href="#" class="social-icon spotify">
+            <img src="assets/spotify.png" alt="Spotify" />
+          </a>
+          <a href="#" class="social-icon instagram">
+            <img src="assets/instagram.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon facebook">
+            <img src="assets/facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon youtube">
+            <img src="assets/youtube.png" alt="YouTube" />
+          </a>
         </div>
       </div>
     </footer>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const navLinks = document.querySelector(".nav-links");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector(".header");
+
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
