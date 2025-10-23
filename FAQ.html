@@ -3,21 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FaQ Page</title>
+    <title>Eventify - Contact Us</title>
     <link rel="stylesheet" href="css/faq.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -41,213 +30,167 @@
         </div>
       </div>
     </header>
-    <div class="image-section">
+
+    <section class="image-section">
       <img
+        src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1200"
+        alt="FAQ Background"
         class="image"
-        src="../assets/heroBackgroundImage.jpg"
-        alt="Hero Background Image"
       />
       <div class="text-overlay">
-        <h1 class="text--one">FAQ Page</h1>
-        <p class="text--two" style="display: inline">Home /</p>
-        <span class="text--two yellow">FAQ Page</span>
+        <h1 class="text--one"><span class="yellow">FAQ</span> Page</h1>
       </div>
-    </div>
-    <section class="main">
-      <div class="contact">
-        <h3>Contact details</h3>
+    </section>
+
+    <main class="main">
+      <section class="contact">
+        <h2>Contact details</h2>
         <p>
-          At Eventic, we believe every event deserves to be unforgettable. Our
-          mission is to make event planning simple, inspiring, and stress-free
+          At Eventic, we believe every event deserves to be unforgettable.<br />
+          Our mission is to make event planning simple, inspiring, and
+          stress-free
         </p>
-      </div>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6769278.675294662!2d-111.32253329759186!3d34.06151917997061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87185043e79852a9%3A0x46bf6e1a63359eba!2sNouveau-Mexique%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sma!4v1761053885270!5m2!1sfr!2sma"
-          width="400"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="carte"
-        ></iframe>
-        <h3>Information</h3>
-        <p>
-          At Eventic, we believe every event deserves to be unforgettable. Our
-          mission is to make event planning simple, inspiring, and stress-free
-        </p>
-      </div>
-      <div class="form">
-        <div class="cube">
-          <label for="">Email*</label><br /><br />
-          <input
-            type="email"
-            class="input_email"
-            style="border: 0"
-          /><br /><br />
-          <label for="">Message*</label><br /><br />
-          <textarea name="message" id="message" style="border: 0"></textarea
-          ><br />
-          <input type="submit" class="submit" />
+      </section>
+
+      <div class="content-grid">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.589843!3d33.573109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM0JzIzLjIiTiA3wrAzNScyMy40Ilc!5e0!3m2!1sen!2sma!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <h4>Contact details</h4>
+          <p>
+            At Eventic, we believe every event deserves to be unforgettable.<br />
+            Our mission is to make event planning simple, inspiring, and
+            stress-free
+          </p>
+        </div>
+
+        <div class="form">
+          <form>
+            <h3>Get in Touch</h3>
+            <input
+              type="email"
+              placeholder="Email*"
+              required
+              class="input_email"
+            />
+            <textarea id="message" placeholder="Message*" required></textarea>
+            <button type="submit" class="submit">Send</button>
+          </form>
         </div>
       </div>
+
       <section class="faq">
-        <h2
-          style="
-            color: #f4df22;
-            margin-left: 45%;
-            margin-bottom: 20px;
-            grid-area: 3 / 2 / 4 / 4;
-            justify-content: center;
-          "
-        >
-          FAQ
-        </h2>
+        <h2>FAQ</h2>
+
         <div class="Q_A">
-          <div class="qst_1">
-            <h3>Question 1</h3>
-            <i id="arrow" class="fa-solid fa-angle-down"></i>
-          </div>
-          <div class="answer_1">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              vitae et nobis, assumenda facere omnis amet veniam officia sunt
-              soluta nam, reiciendis dicta fugiat quam esse distinctio ab, rerum
-              doloremque.
-            </p>
-          </div>
-          <div class="qst_2">
-            <h3>Question 2</h3>
-            <i id="arrow" class="fa-solid fa-angle-down"></i>
-          </div>
-          <div class="answer_2">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              vitae et nobis, assumenda facere omnis amet veniam officia sunt
-              soluta nam, reiciendis dicta fugiat quam esse distinctio ab, rerum
-              doloremque.
-            </p>
-          </div>
-          <div class="qst_3">
-            <h3>Question 3</h3>
-            <i id="arrow" class="fa-solid fa-angle-down"></i>
-          </div>
-          <div class="answer_3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              vitae et nobis, assumenda facere omnis amet veniam officia sunt
-              soluta nam, reiciendis dicta fugiat quam esse distinctio ab, rerum
-              doloremque.
-            </p>
-          </div>
-          <div class="qst_4">
-            <h3>Question 4</h3>
-            <i id="arrow" class="fa-solid fa-angle-down"></i>
-          </div>
-          <div class="answer_4">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              vitae et nobis, assumenda facere omnis amet veniam officia sunt
-              soluta nam, reiciendis dicta fugiat quam esse distinctio ab, rerum
-              doloremque.
-            </p>
-          </div>
-          <div class="qst_5">
-            <h3>Question 5</h3>
-            <i id="arrow" class="fa-solid fa-angle-down"></i>
-          </div>
-          <div class="answer_5">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              vitae et nobis, assumenda facere omnis amet veniam officia sunt
-              soluta nam, reiciendis dicta fugiat quam esse distinctio ab, rerum
-              doloremque.
-            </p>
-          </div>
+          <h3>Question 1</h3>
+        </div>
+
+        <div class="Q_A">
+          <h3>Question 2</h3>
+        </div>
+
+        <div class="Q_A">
+          <h3>Question 3</h3>
+        </div>
+
+        <div class="Q_A">
+          <h3>Question 4</h3>
+        </div>
+
+        <div class="Q_A">
+          <h3>Question 5</h3>
         </div>
       </section>
-      <div class="info">
+
+      <section class="info">
         <div class="follow_us">
           <h3>Follow Us</h3>
-          <img src="assets/FAQ pics/icon1.png" alt="Facebook_logo" />
-          <img src="assets/FAQ pics/icon2.png" alt="Twitter_logo" />
-          <img src="assets/FAQ pics/icon3.png" alt="LinkedIn_logo" />
+          <div>
+            <img src="assets/spotify.png" alt="Spotify" />
+            <img src="assets/instagram.png" alt="Instagram" />
+            <img src="assets/facebook.png" alt="Facebook" />
+          </div>
         </div>
+
         <div class="phone">
           <h3>Phone Number</h3>
-          <p>+212 631 20 35 95</p>
+          <p>+212 123 456 789</p>
         </div>
 
         <div class="email">
           <h3>Email Address</h3>
-          <p>eventify_office@email.com</p>
+          <p>contact@eventify.com</p>
         </div>
+
         <div class="office">
           <h3>Office Address</h3>
-          <p>4041 Parker Rd.Allentown, New Mexico</p>
+          <p>123 Event Street, Casablanca, Morocco</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2>Let's connect</h2>
+          <p>Sign up for new releases to your inbox every month</p>
+        </div>
+        <div class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+          />
+          <button class="newsletter-btn">Join</button>
         </div>
       </div>
     </section>
-    <section class="newsletter-section">
-  <div class="newsletter-container">
-    <div class="newsletter-content">
-      <h2>Let's connect</h2>
-      <p>Sign up for new releases to your inbox every month</p>
-    </div>
-    <div class="newsletter-form">
-      <input
-        type="email"
-        class="newsletter-input"
-        placeholder="Enter your email"
-      />
-      <button class="newsletter-btn">Join</button>
-    </div>
-  </div>
-</section>
 
-<!-- Image Strip -->
-<div class="image-strip">
-  <img src="./assets/image 27.png" alt="Event 1" />
-  <img src="./assets/image 28.png" alt="Event 2" />
-  <img src="./assets/image 29.png" alt="Event 3" />
-  <img src="./assets/image 30.png" alt="Event 4" />
-  <img src="./assets/image 31.png" alt="Event 5" />
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2 class="footer-logo">Event<span>ify</span></h2>
-      <p class="footer-copyright">Created Eventify Team © 2025</p>
+    <div class="image-strip">
+      <img src="./assets/image 27.png" alt="Event 1" />
+      <img src="./assets/image 28.png" alt="Event 2" />
+      <img src="./assets/image 29.png" alt="Event 3" />
+      <img src="./assets/image 30.png" alt="Event 4" />
+      <img src="./assets/image 31.png" alt="Event 5" />
     </div>
 
-    <ul class="footer-nav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2 class="footer-logo">Event<span>ify</span></h2>
+          <p class="footer-copyright">Created Eventify Team © 2025</p>
+        </div>
 
-    <div class="footer-social">
-      <a href="#" class="social-icon spotify">
-        <img src="assets/spotify.png" alt="Spotify" />
-      </a>
-      <a href="#" class="social-icon instagram">
-        <img src="assets/instagram.png" alt="Instagram" />
-      </a>
-      <a href="#" class="social-icon facebook">
-        <img src="assets/facebook.png" alt="Facebook" />
-      </a>
-      <a href="#" class="social-icon youtube">
-        <img src="assets/youtube.png" alt="YouTube" />
-      </a>
-    </div>
-  </div>
-</footer>
-  </body>
-  <script>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon spotify">
+            <img src="assets/spotify.png" alt="Spotify" />
+          </a>
+          <a href="#" class="social-icon instagram">
+            <img src="assets/instagram.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon facebook">
+            <img src="assets/facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon youtube">
+            <img src="assets/youtube.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
       const burger = document.getElementById("burger");
       const navLinks = document.querySelector(".nav-links");
 
@@ -264,4 +207,5 @@
         }
       });
     </script>
+  </body>
 </html>
