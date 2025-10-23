@@ -394,6 +394,7 @@ header.scrolled {
 }
 
 .event-btn {
+  text-decoration: none;
   background-color: #ff6b00;
   color: white;
   border: none;
