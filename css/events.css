@@ -31,6 +31,7 @@ body {
 .yellow {
   color: #ffd400;
 }
+
 .text-overlay {
   position: absolute;
   top: 50%;
@@ -56,20 +57,29 @@ body {
   min-height: 100vh;
 }
 
+/* FIXED: Improved filter layout */
 .filters {
   margin-top: 20px;
   min-height: 5rem;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.filter-item-specifc {
+  padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* FIXED: Added filter-wrapper to properly contain filter items */
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* FIXED: Corrected class name and improved layout */
+.filter-item-specific {
+  display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
@@ -85,6 +95,7 @@ body {
   position: relative;
   clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .filter-item {
@@ -95,6 +106,11 @@ body {
   position: relative;
   white-space: nowrap;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.filter-item:hover {
+  color: #ffd400;
 }
 
 .filter-item--primary .filter-text {
@@ -110,6 +126,7 @@ body {
   background: #2c2c2c;
   padding: 5px 10px;
   border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .calendar-section {
@@ -276,8 +293,19 @@ body {
   white-space: nowrap;
 }
 
+.event-btn:hover {
+  background-color: #e55f00;
+}
+
 .secondary-btn {
   background-color: #b9b9b9;
+}
+
+.meta-information {
+  background-color: #4a3f0a;
+  border-radius: 30px;
+  padding: 4px 12px;
+  color: #ffd400;
 }
 
 /* Responsive Design */
@@ -290,7 +318,13 @@ body {
     padding: 15px;
   }
 
-  .filter-item-specifc {
+  /* FIXED: Better responsive handling */
+  .filter-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .filter-item-specific {
     justify-content: center;
   }
 
@@ -333,22 +367,31 @@ body {
     font-size: 0.9rem;
   }
 
+  /* FIXED: Improved filter stacking on mobile */
   .filters {
     flex-direction: column;
+    align-items: stretch;
     min-height: auto;
     gap: 15px;
     padding: 20px 15px;
   }
 
-  .filter-item--primary {
-    width: auto;
-    padding: 10px 25px;
+  .filter-wrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
   }
 
-  .filter-item-specifc {
+  .filter-item--primary {
+    width: auto;
+    padding: 10px 30px;
+  }
+
+  .filter-item-specific {
     width: 100%;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .filter-item {
@@ -358,7 +401,7 @@ body {
 
   .date-container {
     width: 100%;
-    max-width: 100%;
+    justify-content: center;
     padding: 10px 15px;
   }
 
@@ -396,13 +439,6 @@ body {
   }
 }
 
-.meta-information {
-  background-color: #4a3f0a;
-  border-radius: 30px;
-  padding: 4px 12px;
-  color: black;
-}
-
 /* Mobile devices */
 @media (max-width: 576px) {
   .image-section {
@@ -421,18 +457,28 @@ body {
     padding: 15px 10px;
   }
 
+  /* FIXED: Better mobile filter layout */
+  .filter-wrapper {
+    gap: 10px;
+  }
+
   .filter-item--primary {
     padding: 8px 20px;
     font-size: 13px;
   }
 
-  .filter-item-specifc {
-    gap: 8px;
+  .filter-item-specific {
+    gap: 6px;
+    flex-direction: column;
+    width: 100%;
   }
 
   .filter-item {
-    font-size: 11px;
-    padding: 6px 10px;
+    font-size: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
   }
 
   .date-container {
@@ -506,13 +552,13 @@ body {
   }
 
   .filter-item {
-    font-size: 10px;
-    padding: 5px 8px;
+    font-size: 11px;
+    padding: 7px 14px;
   }
 
   .filter-item--primary {
     font-size: 12px;
-    padding: 7px 15px;
+    padding: 7px 18px;
   }
 
   .date-text {
