@@ -19,9 +19,9 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#events">Events</a></li>
+          <li><a href="#events">Details</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="burger" id="burger">
           <div></div>
@@ -32,19 +32,54 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
-
       <section class="card">
-        <div class="hero">
-          <div id="shadow">
-            <div class="hero-content">
-              <h1>
-                Diverse <span>Nightlife Dance</span> Solution <br />
-                Available !
-              </h1>
+        <div class="hero-carousel">
+          <div class="hero-slide active">
+            <div class="hero">
+              <div id="shadow">
+                <div class="hero-content">
+                  <h1 class="fade-in">
+                    Feel the Beat
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="hero-slide">
+            <div class="hero hero-slide-2">
+              <div id="shadow">
+                <div class="hero-content">
+                  <h1 class="fade-in3">
+                    Feel the Energy 
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slide">
+            <div class="hero hero-slide-3">
+              <div id="shadow">
+                <div class="hero-content">
+                  <h1 class="fade-in2">
+                    Get Ready For the Best 
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn prev" id="prevBtn">‹</button>
+          <button class="carousel-btn next" id="nextBtn">›</button>
+
+          <div class="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1" ></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
         </div>
+
         <div class="hero2">
           <div class="imgCard">
             <img
@@ -97,7 +132,6 @@
         </div>
       </section>
 
-      <!-- About Section -->
       <section class="about-section">
         <div class="about-left">
           <div class="section-label">ABOUT US</div>
@@ -187,7 +221,6 @@
         </div>
       </section>
 
-      <!-- Incoming Events Section -->
       <section class="events-section">
         <h2 class="section-title">Incoming Events</h2>
 
@@ -254,14 +287,20 @@
       </section>
 
       <div class="categories-bar">
-        <div class="category-item">DJ <span>Events</span></div>
-        <div class="category-item">Business Events</div>
-        <div class="category-item">DJ <span>Events</span></div>
-        <div class="category-item">Business Events</div>
-        <div class="category-item">DJ <span>Event</span></div>
+        <div class="categories-scroll">
+          <div class="category-item">DJ <span>Events</span></div>
+          <div class="category-item">Business Events</div>
+          <div class="category-item">DJ <span>Events</span></div>
+          <div class="category-item">Business Events</div>
+          <div class="category-item">DJ <span>Events</span></div>
+          <div class="category-item">DJ <span>Events</span></div>
+          <div class="category-item">Business Events</div>
+          <div class="category-item">DJ <span>Events</span></div>
+          <div class="category-item">Business Events</div>
+          <div class="category-item">DJ <span>Events</span></div>
+        </div>
       </div>
 
-      <!-- Creative Team Section -->
       <section class="team-section">
         <h2 class="section-title">Our Creative Team</h2>
 
@@ -320,7 +359,6 @@
         </div>
       </section>
 
-      <!-- Upcoming News Section -->
       <section class="news-section">
         <h2 class="section-title">Upcomming News</h2>
 
@@ -380,7 +418,6 @@
         </div>
       </section>
 
-      <!-- Image Strip -->
       <div class="image-strip">
         <img src="./assets/image 27.png" alt="Event 1" />
         <img src="./assets/image 28.png" alt="Event 2" />
@@ -438,6 +475,64 @@
           header.classList.remove("scrolled");
         }
       });
+
+      // Hero Carousel
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".hero-slide");
+      const dots = document.querySelectorAll(".dot");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+
+        const h1 = slides[index].querySelector("h1");
+        h1.style.animation = "none";
+        setTimeout(() => {
+          h1.style.animation = "fadeInUp 1s ease-out";
+        }, 10);
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      document.getElementById("nextBtn").addEventListener("click", nextSlide);
+      document.getElementById("prevBtn").addEventListener("click", prevSlide);
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          currentSlide = index;
+          showSlide(currentSlide);
+        });
+      });
+
+      let autoplayInterval = setInterval(nextSlide, 2000);
+
+      const heroCarousel = document.querySelector(".hero-carousel");
+      heroCarousel.addEventListener("mouseenter", () => {
+        clearInterval(autoplayInterval);
+      });
+
+      heroCarousel.addEventListener("mouseleave", () => {
+        autoplayInterval = setInterval(nextSlide, 5000);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") prevSlide();
+        if (e.key === "ArrowRight") nextSlide();
+      });
+
+
     </script>
   </body>
 </html>
