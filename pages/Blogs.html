@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/blogs.css" />
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
     <title>Blog</title>
 </head>
 
@@ -29,7 +30,7 @@
     </header>
 
     <section id="content">
-        <section>
+        <main>
             <div class="title"><h3>Gallery</h3></div>
             <div class="boxes">
                 
@@ -53,7 +54,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
             </div>
-        </section>
+        </main>
 
 
 
@@ -62,6 +63,9 @@
             <div class="title">
                 <h3>Social Media</h3>
             </div>
+
+
+
             <div class="spotify"><img src="/assets/blog_images/spotify.png" alt="spotify logo"></div>
             <div class="google"><img src="/assets/blog_images/google (2).png" alt="google logo"></div>
             <div class="stripe"><img src="/assets/blog_images/stripe.png" alt="stripe logo"></div>
@@ -147,18 +151,69 @@
                             </div>
             </div>
 
-
-
-
-
         </section>
-
-
-
 
     </section>
 
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2>Let's connect</h2>
+          <p>Sign up for new releases to your inbox every month</p>
+        </div>
+        <div class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+          />
+          <button class="newsletter-btn">Join</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Strip -->
+    <div class="image-strip">
+      <img src="./assets/image 27.png" alt="Event 1" />
+      <img src="./assets/image 28.png" alt="Event 2" />
+      <img src="./assets/image 29.png" alt="Event 3" />
+      <img src="./assets/image 30.png" alt="Event 4" />
+      <img src="./assets/image 31.png" alt="Event 5" />
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2 class="footer-logo">Event<span>ify</span></h2>
+          <p class="footer-copyright">Created Eventify Team © 2025</p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon spotify">
+            <img src="assets/spotify.png" alt="Spotify" />
+          </a>
+          <a href="#" class="social-icon instagram">
+            <img src="assets/instagram.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon facebook">
+            <img src="assets/facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon youtube">
+            <img src="assets/youtube.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+    </footer>
 
 </body>
 
 </html>
+<script src="/js/navbar_script.js"></script>
