@@ -14,6 +14,7 @@
   box-sizing: border-box;
   text-transform: capitalize;
   font-size: Inter;
+ 
 }
 
 html {
@@ -49,6 +50,7 @@ li {
   margin: 0 auto;
   height: 100%;
   /* overflow-x: hidden; */
+  /* background-color: red; */
 }
 
 button,
@@ -110,10 +112,6 @@ header nav ul li a {
 }
 
 /* hero section */
-
-main {
-  background-color: var(--container-color);
-}
 
 .hero_title {
   /* background-color: red; */
@@ -286,7 +284,7 @@ main {
     left: 0;
     top: 0;
     width: 100%;
-    height:230vh;
+    /* height:280vh; */
     background-color: #fff;
     display: none;
     transition: left .5s linear;
@@ -295,7 +293,7 @@ main {
 }
 
 
-
+/* gallery */
 
 
 #overlay_jazz_gallery.show{
@@ -414,7 +412,7 @@ main {
 
 .card_gallery{
 display: grid;
-grid-template-columns: repeat(auto-fill , minmax(400px , 400px));
+grid-template-columns: repeat(auto-fill , minmax(200px , 400px));
 justify-content: center;
 align-items: center;
 padding: 0 10px;
@@ -432,28 +430,471 @@ height: 180vh;
     flex-direction: column;
     box-shadow: 2px 5px 2px #c5c3c350;
     gap: 10px;
-
+    overflow: hidden;
+    
     & span{
-        font-size: 12px;
+      font-size: 12px;
     }
+  }
+  
+
+  
+  
+  .card img{
+  transition: scale .3s linear;
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 
-.card img{
-    width: 100%;
-    height:200px;
-    object-fit: contain;
-    object-position: center;
+.card img:hover{
+  scale: 1.1;
 }
 
 .footer_gallery{
     /* background-color: rgba(219, 210, 210, 0.442); */
+    background-color: var(--white_color);
     width: 100%;
     height: 200px;
     padding: 10px;
     display: grid;
     place-content: center;
-   gap: 20px;
-
-   transform: translateY(30PX);
+    gap: 20px;
+   /* transform: translateY(30PX); */
 }
+
+/* fin du gallery */
+
+/* details */
+
+
+
+.details{
+  color: var(--white_color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(150px);
+  position: relative;
+  z-index: -1;
+
+  
+}
+
+.left{
+/* background-color: red; */
+width:60%;
+}
+
+
+
+.date_time{
+  display: flex;
+  background-color: #241c1c;
+
+ & .date , .time{
+
+display:flex;
+align-items: center;
+gap: 10px;
+padding: 10px;
+
+  }
+
+ & .price{
+    background-color: var(--btn_color);
+    width: 100px;
+    height: 40px;
+  }
+
+
+
+
+}
+
+.first_paragraph{
+  /* background-color: aqua; */
+  padding: 10px;
+
+  }
+
+
+
+.second_paragraph{
+  /* background-color: #241c1c; */
+}
+
+
+
+.first_paragraph , .second_paragraph{
+  width: 100%;
+  padding: 10px;
+  & h2{
+    padding: 10px 0;
+  }
+
+  & p{
+    line-height: 1.5;
+  }
+}
+
+
+.left_side_images{
+  /* background-color: blue; */
+  display: flex;
+  gap: 10px;
+}
+
+.left_side_images img{
+  width: 350px;
+}
+
+.table{
+  width: 300px;
+  border: 1px solid #fff;
+  height: 600px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.table_header{
+  border-bottom: 1px solid #fff;
+  padding: 20px 0;
+
+
+ 
+}
+
+.table h1{
+  font-size: 20px;
+  font-weight: 200;
+  color: var(--btn_color);
+}
+
+.table_header h1{
+  color: var(--white_color);
+}
+
+
+
+.p_d h1{
+  padding: 10px 0;
+}
+
+
+
+.Book_Event{
+  background-color: var(--btn_color);
+  width:120px;
+  height: 40px;
+  margin:0 auto;
+
+}
+
+/* event stage  */
+
+.event_stage{
+  /* background-color: red; */
+  transform: translateY(200px);
+  display: flex;
+   position: relative;
+   z-index: -1;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+.event_stage .event_stage_content{
+ width: 50%;
+color: var(--white_color);
+ align-self: center;
+
+
+ & p{
+  padding: 10px 0;
+  line-height: 1.5;
+ }
+}
+
+
+.event_stage .event_stage_image img{
+  width:400px;
+
+  
+}
+
+
+
+/* artist cover */
+
+.artist_cover{
+  /* background-color: red; */
+  transform: translateY(220px);
+  /* padding: 20px 0; */
+  /* height: 30vh; */
+  background-attachment: fixed;
+
+
+
+  & h1{
+  color: var(--white_color);
+  /* background-color: red; */
+  padding: 30px 0;
+  }
+  
+}
+
+.overlay_artist{
+background-image: url("../assets/drummer.jpg");
+ width: 100%;
+ height: 40vh;
+ background-size: cover;
+ object-fit: cover;
+ background-position: center;
+  
+  
+}
+
+
+
+
+
+/* event singer  */
+
+.event_singer{
+  /* background-color: orange; */
+  transform: translateY(280px);
+  color: var(--white_color);
+}
+
+
+.singer_title{
+  padding: 10px 0;
+}
+
+.singer_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(200px , 300px));
+  justify-content: center;
+  align-items: center;
+
+}
+
+ .singer_box{
+  width: 100%;
+  padding: 20px ;
+
+
+}
+
+
+.image_card_singer{
+ border-radius: 10px;
+ padding: 10px;
+ transition: all .4s linear;
+ 
+
+& h3{
+  position: relative;
+}
+
+ & h3::after{
+  content :"";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: var(--white_color);
+  left: 50%;
+  top: 50%;
+ }
+}
+
+
+.image_card_singer img{
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: inherit;
+
+}
+
+
+
+.info{
+
+  padding: 10px;
+  transition: all .4s linear;
+}
+
+
+.cover_image{
+  border-radius: 20px;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.cover_image::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(30, 31, 30, 0.678);
+  width: 100%;
+  height:100%;
+  transform: translateY(-300px);
+
+  transition: transform .4s linear;
+  transform-origin: top;
+}
+
+.image_card_singer:hover .cover_image::after{
+  
+  transform: translateY(0px);
+
+}
+
+.image_card_singer:hover .info{
+  transform: translateY(-300px);
+}
+
+
+
+
+@media screen  and (max-width : 768px) {
+
+.container {
+  width: 100%;
+  background-color: red;
+}
+
+
+
+#hero_title::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background-color: #ffd400;
+  animation: event 2s linear alternate 1;
+}
+
+.count_box {
+  background-color: var(--count-box-color);
+  width:80%;
+  margin: auto;
+  height: 120px;
+  flex-direction: column;
+  gap: 0px;
+
+}
+
+.count_title h3 {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.count_box .count_time {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+
+  & p {
+    position: relative;
+    font-size: 20px;
+    
+  }
+
+  & p,
+  h4 {
+    padding: 6px;
+  }
+
+  & h4 {
+    font-size: 20px;
+  }
+}
+
+/* .count_box .count_time p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--btn_color);
+  left: 0;
+  top: 0;
+} */
+
+
+
+.jazz_event_image .image_event {
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+
+
+/* 
+.show_in_gallery{
+    color: #c6c6c5d3;
+    position: absolute;
+    left: -500px;
+    top: 40%;
+    transform: translateY(-40%);
+    z-index: 2222;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    overflow: hidden;
+    font-weight: 100;
+    opacity: 0;
+}
+
+.jazz_event_image .image_event:hover::after{
+    transform: translate(0);
+    opacity: 1;
+}
+
+
+.jazz_event_image .image_event:hover .show_in_gallery{
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: visible;
+    opacity: 1;
+}
+
+
+.jazz_event_image .image_event::after {
+    transition: transform .8s linear;
+}
+
+.jazz_event_image .show_in_gallery {
+    transition: left 1.2s linear;
+}
+
+   */
+
+
+
+
+
+   
+} 
+  
