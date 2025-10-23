@@ -1,7 +1,11 @@
 * {
     margin: 0;
+    
 
 }
+body {
+        background-color: #262222;
+    }
 
 @media(max-width:769px) {
     body {
@@ -12,7 +16,7 @@
     #content {
         height: 4900px;
         width: 100%;
-        background-color: #181616;
+        background-color: #262222;
 
         min-width: 200px;
         max-width: 770px;
@@ -47,6 +51,14 @@
         color: white;
     }
 
+    .title {
+        margin-top: 30px;
+        grid-column: 1/5;
+        display: flex;
+        justify-content: center;
+        
+
+    }
     .title_mobile {
 
 
@@ -245,7 +257,7 @@
         font-family: "Metal Mania", cursive;
         color: yellow;
         height: 76px;
-        width: 200px;
+        
 
     }
 
@@ -405,7 +417,7 @@
     #content {
         height: 4900px;
         width: 1023px;
-        background-color: #181616;
+        background-color: #262222;
 
 
     }
@@ -459,9 +471,7 @@
         align-items: start;
     }
 
-    body {
-        background-color: #262222;
-    }
+    
 
     .boxes {
         padding: 40px;
@@ -617,9 +627,12 @@
     }
 
     .title {
+        margin-top: 30px;
         grid-column: 1/5;
         display: flex;
         justify-content: center;
+        
+
     }
 
     .title {
@@ -631,7 +644,7 @@
         font-family: "Metal Mania", cursive;
         color: yellow;
         height: 76px;
-        width: 323px;
+        
     }
 
     .spotify {
@@ -697,7 +710,7 @@
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(auto-fill , 370px);
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 130px;
         justify-content: center;
         gap:50px;
 
@@ -732,6 +745,17 @@
         font-size: 25px;
         color: #AEA6A6;
     }
+    .responsive_iframe{
+        
+        width: 340px;
+        height:200px;
+    }
+    .map{
+        
+        display: flex;
+        grid-column: 1/3;
+        justify-content: center;
+    }
 
 }
 
@@ -763,7 +787,7 @@
     #content {
         height: 4900px;
         width: 1279px;
-        background-color: #181616;
+        background-color: #262222;
 
 
     }
@@ -822,12 +846,14 @@
     }
 
     .boxes {
+        justify-content: center;
         padding: 40px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 300px);
+        grid-template-columns: repeat(auto-fill,400px);
+        grid-template-rows: repeat(2, 300px);
         margin-bottom: 100px;
         gap: 9em;
+        padding: 40px;
     }
 
     .boxes p {
@@ -975,9 +1001,12 @@
     }
 
     .title {
+        margin-top: 30px;
         grid-column: 1/5;
         display: flex;
         justify-content: center;
+        
+
     }
 
     .title {
@@ -989,7 +1018,6 @@
         font-family: "Metal Mania", cursive;
         color: yellow;
         height: 76px;
-        width: 323px;
     }
 
     .spotify {
@@ -1090,6 +1118,17 @@
         font-size: 25px;
         color: #AEA6A6;
     }
+    .responsive_iframe{
+        width: 380px;
+        height:230px;
+    }
+    .map{
+        
+        display: flex;
+        grid-column: 1/4;
+        justify-content: center;
+    }
+
 
 }
 
@@ -1116,9 +1155,10 @@
 
 
     #content {
+        margin: auto;
         height: 4900px;
-        width: 100%;
-        background-color: #181616;
+        width: 90%;
+        background-color: #262222;
 
 
     }
@@ -1177,12 +1217,14 @@
     }
 
     .boxes {
+        justify-content: center;
         padding: 40px;
         display: grid;
-        grid-template-columns: 1fr  1fr;
+        grid-template-columns: repeat(auto-fill,280px);
         grid-template-rows: repeat(2, 300px);
         margin-bottom: 100px;
-        gap: 9em;
+        gap: 10px 80px;
+        padding: 40px;
     }
 
     .boxes p {
@@ -1327,12 +1369,16 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
         margin-bottom: 100px;
+        gap:30px;
     }
 
     .title {
+        margin-top: 30px;
         grid-column: 1/5;
         display: flex;
         justify-content: center;
+        
+
     }
 
     .title {
@@ -1344,7 +1390,7 @@
         font-family: "Metal Mania", cursive;
         color: yellow;
         height: 76px;
-        width: 323px;
+        
     }
 
     .spotify {
@@ -1406,14 +1452,14 @@
         align-items: center;
         gap: 60px;
     }
-    .grid_location {
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill , 370px);
+        .grid_location {
+        margin-top: 80px;
+        display: grid
+;
+        grid-template-columns: repeat(3, 390px);
         grid-template-rows: 1fr 1fr;
         justify-content: center;
-        gap:50px;
-
+        gap: 50px;
     }
     
     .under_title{
@@ -1445,4 +1491,15 @@
         font-size: 25px;
         color: #AEA6A6;
     }
+    .responsive_iframe{
+        width: 800px;
+        height:400px;
+    }
+    .map{
+        
+        display: flex;
+        grid-column: 1/4;
+        justify-content: center;
+    }
+
 }
