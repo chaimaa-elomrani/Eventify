@@ -15,6 +15,25 @@
     />
   </head>
   <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-logo">
+          <h2>Event<span>ify</span></h2>
+        </div>
+        <ul class="header-nav-links" id="header-navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="header-burger" id="header-burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
     <div class="image-section">
       <img
         class="image"
@@ -205,5 +224,22 @@
         </div>
       </div>
     </div>
+    <script>
+      const burger = document.getElementById("header-burger");
+      const navLinks = document.querySelector(".header-nav-links");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector(".header");
+
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
