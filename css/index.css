@@ -1,0 +1,1377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2a2a2a;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+header.scrolled {
+  background-color: rgba(46, 30, 20, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1400px;
+  width: 70%;
+  /* margin: 0 auto; */
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo h2 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 0;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f4df22;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+  padding: 1.5rem 0;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: #f4df22;
+}
+
+/* Hero Section */
+.card {
+  position: relative;
+  width: 100%;
+}
+
+/* Carousel Container */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  background: url("/assets/backgroundHome.png") center / cover no-repeat;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide-2 {
+  background: url("/assets/slide2.jpg") center / cover no-repeat;
+}
+
+.hero-slide-3 {
+  background: url("/assets/slide3.jpg") center / cover no-repeat;
+}
+
+
+
+
+#shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  color: white;
+  padding: 0 2rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-family: "Metal Mania", cursive;
+  font-size: 60px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.hero-content h1.fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 span {
+  color: #f4df22;
+}
+
+/* Navigation Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background:none;
+  color: white;
+  border: none;
+  font-size: 48px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.fade-in3 span{
+  color: #c21914;
+}
+
+/* .carousel-btn:hover {
+  background: rgba(244, 223, 34, 1);
+  transform: translateY(-50%) scale(1.1);
+} */
+
+.carousel-btn.prev {
+  left: 2rem;
+}
+
+.carousel-btn.next {
+  right: 2rem;
+}
+
+/* Dots Indicator */
+.carousel-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: #f4df22;
+  border-color: white;
+  transform: scale(1.3);
+}
+
+/* Artist Cards */
+.hero2 {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.imgCard {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+}
+
+.imgCard:hover {
+  flex: 1.5;
+}
+
+.imgCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imgCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.artist-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+}
+
+.artist-info h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.artist-info p {
+  font-size: 12px;
+  color: #f4df22;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Metal Mania", cursive;
+}
+
+/* Responsive */
+/* @media (max-width: 767px) {
+  .carousel-btn {
+    font-size: 32px;
+    padding: 0.5rem 1rem;
+  }
+
+  .carousel-btn.prev {
+    left: 1rem;
+  }
+
+  .carousel-btn.next {
+    right: 1rem;
+  }
+
+  .carousel-dots {
+    bottom: 1rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+} */
+
+/* About Section */
+.about-section {
+  padding: 6rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-left {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-label {
+  color: #f4df22;
+  font-size: 40px;
+  font-family: "Metal Mania", cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-left h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.about-description {
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-description p {
+  margin-bottom: 1rem;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature-content h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.feature-content p {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Albums Section */
+.albums-section {
+  position: relative;
+  background-color: #1a1a1a;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.album-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 223, 34, 0.25) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(244, 223, 34, 0.15) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: "Metal Mania", cursive;
+  color: #f4df22;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.album-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  aspect-ratio: 1;
+}
+
+.album-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.4) contrast(1.1);
+}
+
+.albums-description {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Events Section */
+.events-section {
+  background-color: #1a1a1a;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.event-card {
+  background-color: #0a0a0a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  border-color: #f4df22;
+}
+
+.event-image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-header {
+  border-bottom: 2px solid #f4df22;
+  padding-bottom: 1rem;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.event-meta {
+  display: flex;
+  gap: 2rem;
+  font-size: 13px;
+}
+
+.event-meta span {
+  color: #f4df22;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-description {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.event-location {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.event-btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.event-btn:hover {
+  background-color: #ff8c00;
+}
+
+.categories-bar {
+  background-color: white;
+  padding: 1.5rem 0;
+  display: flex;
+  overflow: hidden;
+  border-top: 4px solid #ff6b00;
+  border-bottom: 4px solid #ff6b00;
+  position: relative;
+}
+
+.categories-scroll {
+  display: flex;
+  gap: 4rem;
+  animation: scroll-left 30s linear infinite;
+  white-space: nowrap;
+  padding: 0 2rem;
+}
+
+.categories-scroll:hover {
+  animation-play-state: paused;
+}
+
+.category-item {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover {
+  transform: scale(1.1);
+  color: #ff6b00;
+}
+
+.category-item span {
+  color: #ff6b00;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .category-item {
+    font-size: 18px;
+  }
+  
+  .categories-scroll {
+    gap: 2rem;
+    animation-duration: 20s;
+  }
+}
+
+/* Team Section */
+.team-section {
+  background-color: #2a2a2a;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.section-title {
+  font-family: "Metal Mania", cursive;
+  color: #f4df22;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.member-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 3px solid #f4df22; */
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-name {
+  font-family: "Metal Mania", cursive;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+}
+
+.member-description {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* News Section */
+.news-section {
+  background-color: #2a2a2a;
+  padding: 0 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.news-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-title {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.newsletter-section {
+  background-color: #2a2a2a;
+  padding: 3rem 3rem 2rem;
+    /* background-color: #1a1a1a; */
+  padding: 2.5rem 3rem;
+  border-top: 4px solid #605f5f;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.newsletter-content h2 {
+  color: #ff6b00;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-content p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 0.3rem;
+  background-color: transparent;
+  min-width: 400px;
+}
+
+.newsletter-input {
+  background-color: transparent;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-size: 14px;
+  flex: 1;
+  outline: none;
+}
+
+.newsletter-input::placeholder {
+  color: #888;
+}
+
+.newsletter-btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+  background-color: #ff8c00;
+}
+
+/* Image Strip */
+.image-strip {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-strip img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  padding: 2.5rem 3rem;
+  border-top: 1px solid #333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-logo span {
+  color: #f4df22;
+}
+
+.footer-copyright {
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f4df22;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+/* burger menu */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+  transition: 0.3s;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    padding: 0 2rem;
+    gap: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  .about-section {
+    padding: 5rem 2rem;
+    gap: 3rem;
+  }
+
+  .albums-section,
+  .events-section,
+  .team-section,
+  .news-section {
+    padding: 4rem 2rem;
+  }
+
+  .newsletter-section {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Tablette : 768 – 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 1.5rem;
+    gap: 30%;
+  }
+
+  .logo h2 {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero2 {
+    height: 25vh;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .about-left h2 {
+    font-size: 40px;
+  }
+
+  .section-label {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  /* Albums with better scaling */
+  .albums-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+    gap: 1rem;
+  }
+
+  .album-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .albums-section,
+  .events-section,
+  .team-section,
+  .news-section {
+    padding: 3.5rem 2rem;
+  }
+
+  .event-card {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .event-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .categories-bar {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .category-item {
+    font-size: 22px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Newsletter stays in one row */
+  .newsletter-container {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .newsletter-content h2 {
+    font-size: 26px;
+  }
+
+  .newsletter-content p {
+    font-size: 13px;
+  }
+
+  .newsletter-input {
+    width: 250px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+/* Mobile : ≤767px */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+    /* gap: 20%; */
+    width: 100%;
+    /* flex-direction: column; */
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* position: :; */
+  }
+
+  header {
+    position: relative;
+    background: rgba(46, 30, 20, 0.95);
+   
+  }
+
+  .logo h2 {
+    font-size: 22px;
+  }
+
+   .nav-links {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    background-color: #333;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  /* Creative solution for hero images - horizontal scrollable gallery */
+  .hero2 {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0;
+  }
+
+  .imgCard {
+    min-width: 250px;
+    max-width: 250px;
+    height: 180px;
+    scroll-snap-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 0.5rem;
+  }
+
+  .imgCard:first-child {
+    margin-left: 1rem;
+  }
+
+  .imgCard:last-child {
+    margin-right: 1rem;
+  }
+
+  .imgCard:hover {
+    flex: none;
+    transform: scale(1.02);
+  }
+
+  .artist-info {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .artist-info h3 {
+    font-size: 18px;
+  }
+
+  .artist-info p {
+    font-size: 11px;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .about-left {
+    max-width: 100%;
+  }
+
+  .about-left h2 {
+    font-size: 32px;
+  }
+
+  .section-label {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .albums-section,
+  .events-section,
+  .team-section,
+  .news-section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Elegant 2x2 grid for albums on mobile */
+  .albums-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 500px;
+  }
+
+  .album-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .event-card {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .event-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .event-title {
+    font-size: 20px;
+  }
+
+  .event-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .categories-bar {
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .category-item {
+    font-size: 18px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .member-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-section {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Newsletter stays in row on mobile with title beside input */
+  .newsletter-container {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .newsletter-content {
+    flex-shrink: 0;
+  }
+
+  .newsletter-content h2 {
+    font-size: 20px;
+    margin-bottom: 0.25rem;
+  }
+
+  .newsletter-content p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 350px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 12px;
+  }
+
+  .newsletter-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .image-strip {
+    height: 80px;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .imgCard {
+    min-width: 220px;
+    max-width: 220px;
+    height: 160px;
+  }
+}
