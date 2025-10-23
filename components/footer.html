@@ -1,0 +1,354 @@
+<!-- inside of main  -->
+ 
+      <section class="newsletter-section">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h2>Let's connect</h2>
+            <p>Sign up for new releases to your inbox every month</p>
+          </div>
+          <div class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Enter your email"
+            />
+            <button class="newsletter-btn">Join</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Image Strip -->
+      <div class="image-strip">
+        <img src="./assets/image 27.png" alt="Event 1" />
+        <img src="./assets/image 28.png" alt="Event 2" />
+        <img src="./assets/image 29.png" alt="Event 3" />
+        <img src="./assets/image 30.png" alt="Event 4" />
+        <img src="./assets/image 31.png" alt="Event 5" />
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2 class="footer-logo">Event<span>ify</span></h2>
+          <p class="footer-copyright">Created Eventify Team © 2025</p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon spotify">
+            <img src="assets/spotify.png" alt="Spotify" />
+          </a>
+          <a href="#" class="social-icon instagram">
+            <img src="assets/instagram.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon facebook">
+            <img src="assets/facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon youtube">
+            <img src="assets/youtube.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+    </footer>
+<style>
+    .newsletter-section {
+  background-color: #2a2a2a;
+  padding: 3rem 3rem 2rem;
+    /* background-color: #1a1a1a; */
+  padding: 2.5rem 3rem;
+  border-top: 4px solid #605f5f;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.newsletter-content h2 {
+  color: #ff6b00;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-content p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 0.3rem;
+  background-color: transparent;
+  min-width: 400px;
+}
+
+.newsletter-input {
+  background-color: transparent;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-size: 14px;
+  flex: 1;
+  outline: none;
+}
+
+.newsletter-input::placeholder {
+  color: #888;
+}
+
+.newsletter-btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+  background-color: #ff8c00;
+}
+
+/* Image Strip */
+.image-strip {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-strip img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  padding: 2.5rem 3rem;
+  border-top: 1px solid #333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-logo span {
+  color: #f4df22;
+}
+
+.footer-copyright {
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f4df22;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .newsletter-section {
+    padding: 2.5rem 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.newsletter-container {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .newsletter-content h2 {
+    font-size: 26px;
+  }
+
+  .newsletter-content p {
+    font-size: 13px;
+  }
+
+  .newsletter-input {
+    width: 250px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .newsletter-section {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Newsletter stays in row on mobile with title beside input */
+  .newsletter-container {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .newsletter-content {
+    flex-shrink: 0;
+  }
+
+  .newsletter-content h2 {
+    font-size: 20px;
+    margin-bottom: 0.25rem;
+  }
+
+  .newsletter-content p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 350px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 12px;
+  }
+
+  .newsletter-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .image-strip {
+    height: 80px;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .imgCard {
+    min-width: 220px;
+    max-width: 220px;
+    height: 160px;
+  }
+}
+
+</style>
+
