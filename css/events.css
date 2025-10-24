@@ -20,14 +20,15 @@ header {
   right: 0;
   z-index: 1000;
   background: transparent;
+  position: fixed;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
-
+/* 
 header.scrolled {
   background-color: rgba(46, 30, 20, 0.95) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .header-container {
   max-width: 1400px;
