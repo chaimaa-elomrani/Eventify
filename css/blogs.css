@@ -1291,41 +1291,6 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
 }
 
 
-header {
-  
-
-  z-index: 100;
-  background: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-}
-
-header.scrolled {
-  background-color: rgba(46, 30, 20, 0.95) !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.container {
-  max-width: 1400px;
-  width: 70%;
-  /* margin: 0 auto; */
-  padding: 0 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo h2 {
-  font-size: 28px;
-  color: white;
-  font-weight: bold;
-  padding: 1rem 0;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: #f4df22;
-}
-
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -1357,29 +1322,28 @@ header.scrolled {
   margin: 4px;
   transition: 0.3s;
 }
+
+/* Mobile styles - hide nav-links by default, show burger menu */
 @media (max-width: 767px) {
-    .container {
+  .container {
     padding: 0 1rem;
-    /* gap: 20%; */
     width: 100%;
-    /* flex-direction: column; */
-     display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* position: :; */
   }
 
   header {
     position: relative;
     background: rgba(46, 30, 20, 0.95);
-   
   }
 
   .logo h2 {
     font-size: 22px;
   }
 
-   .nav-links {
+  /* Hide nav-links by default on mobile, show only with .show class */
+  .nav-links {
     position: absolute;
     top: 45px;
     right: 30px;
@@ -1387,11 +1351,10 @@ header.scrolled {
     width: 40%;
     flex-direction: column;
     align-items: center;
-    display: flex;
+    display: none;
   }
 
   .nav-links.show {
-
     display: flex;
   }
 
@@ -1402,6 +1365,48 @@ header.scrolled {
   .nav-links a {
     font-size: 12px;
     padding: 0.5rem;
+  }
+}
+
+/* Tablet styles - hide nav-links by default, show burger menu */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-links {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    background-color: #333;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+}
+
+/* Desktop styles - show nav-links by default, hide burger menu */
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    flex-direction: row;
+  }
+
+  .burger {
+    display: none;
   }
 }
 
