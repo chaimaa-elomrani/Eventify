@@ -231,6 +231,8 @@ body {
   }
 
   .map {
+        margin-bottom: 4rem;
+
     width: 100%;
   }
 
@@ -457,6 +459,8 @@ body {
   }
 
   .map {
+        margin-bottom: 4rem;
+
     grid-column: 1 / 3;
     display: flex;
     justify-content: center;
@@ -684,6 +688,8 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
   }
 
   .map {
+        margin-bottom: 4rem;
+
     grid-column: 1 / 4;
     display: flex;
     justify-content: center;
@@ -910,6 +916,7 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
   }
 
   .map {
+    margin-bottom: 4rem;
     grid-column: 1 / 4;
     display: flex;
     justify-content: center;
