@@ -460,6 +460,15 @@ header.scrolled {
 .social-icon:hover {
   transform: scale(1.1);
 }
+summary{
+  list-style-type: none;
+  font-size: x-large;
+  display: flex;
+  justify-content: space-between;
+}
+details p {
+  margin-top: 2%;
+}
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .container {
