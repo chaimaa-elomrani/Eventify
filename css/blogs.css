@@ -270,7 +270,6 @@ body {
     width: 100px;
     height: 32px;
   }
-
   #nav {
     padding: 16px 20px;
     display: flex;
@@ -1330,7 +1329,7 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
   transition: 0.3s;
 }
 
-/* Mobile styles - hide nav-links by default, show burger menu */
+
 @media (max-width: 767px) {
   .container {
     padding: 0 1rem;
@@ -1349,7 +1348,7 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
     font-size: 22px;
   }
 
-  /* Hide nav-links by default on mobile, show only with .show class */
+
   .nav-links {
     position: absolute;
     top: 45px;
@@ -1375,7 +1374,7 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
   }
 }
 
-/* Tablet styles - hide nav-links by default, show burger menu */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .nav-links {
     position: absolute;
@@ -1402,7 +1401,7 @@ background-image: url(/assets/black-color.png), url(/assets/blog_images/heroBack
   }
 }
 
-/* Desktop styles - show nav-links by default, hide burger menu */
+
 @media (min-width: 1024px) {
   .nav-links {
     display: flex;
